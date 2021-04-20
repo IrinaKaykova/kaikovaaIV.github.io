@@ -1,0 +1,29 @@
+@startuml
+skinparam monochrome true
+hide circle
+hide methods
+
+left to right direction
+actor P1 as "Эксперт"
+actor P2 as "Администратор"
+actor M1 as "ИС"
+
+  usecase F1 as "Определение правил заполнения"
+  usecase F2 as "Заполнение матаданных стандартов"
+  usecase F3 as "Заполнение справочников"
+  usecase F4 as "Импортирование данных"
+  usecase F5 as "Подготовка к публикации"
+
+
+  P1 -- (F1)
+  P1 -- (F2)
+  P2 -- (F3)
+  P2 -- (F4)
+  P2 -- (F5)
+
+  (F1) -- M1
+  (F2) -- M1
+  (F3) -- M1
+  (F4) -- M1
+  (F5) -- M1
+@enduml
